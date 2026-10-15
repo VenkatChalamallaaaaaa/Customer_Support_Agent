@@ -1,0 +1,11 @@
+langgraph
+langchain
+langchain-anthropic
+langchain-community
+psycopg[binary]
+sqlalchemy
+pandas
+python-dotenv
+streamlit
+sentence-transformers
+pgvector
