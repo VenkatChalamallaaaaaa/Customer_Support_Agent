@@ -4,11 +4,13 @@ An AI support assistant for an online store. It answers policy questions from a 
 
 Built on the public [Olist Brazilian e-commerce dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) (PostgreSQL). The store, "Marketly", and its return policy are fictional.
 
-![Customer chat](docs/chat.png)
+![Customer home with orders](screenshots/APP.png)
+
+![Refund conversation](screenshots/Chat.png)
 
 | Supervisor console | Eval run |
 |---|---|
-| ![Supervisor](docs/supervisor.png) | ![Eval](docs/eval.png) |
+| ![Supervisor](screenshots/supervisor.png) | ![Eval](screenshots/Screenshot%202026-10-15%20142108.png) |
 
 ## What it does
 
@@ -58,7 +60,7 @@ The model is live, so an occasional run can differ in wording; re-run before ass
 
 ## Setup
 
-Requirements: Docker Desktop, Python 3.13, an Anthropic API key, and the Olist tables loaded into PostgreSQL (see my [AI SQL Analyst](https://github.com/<VenkatChalamallaaaaaa>/ai-sql-analyst) project for the loader).
+Requirements: Docker Desktop, Python 3.13, an Anthropic API key, and the Olist tables loaded into PostgreSQL (see my [AI SQL Analyst](https://github.com/VenkatChalamallaaaaaa/ai-sql-analyst) project for the loader).
 
 ```powershell
 # 1. Database with pgvector (database name: olist)
@@ -101,6 +103,8 @@ ingest_policy.py      Chunk, embed and store the policy
 policies/             Fictional return policy (the knowledge base)
 setup_db.sql          Refunds table and least-privilege role
 eval_support.py       Behaviour + retrieval evaluation
+check_tests/          Early debugging scripts for individual tools
+screenshots/          Images used in this README
 ```
 
 ## Limitations and next steps
